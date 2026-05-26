@@ -1,0 +1,11 @@
+selenium>=4.20
+pytest>=8.0
+pytest-xdist
+pytest-rerunfailures
+pytest-timeout
+pytest-mock
+allure-pytest
+requests
+pydantic>=2.0
+faker
+python-dotenv

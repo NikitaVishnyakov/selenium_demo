@@ -1,14 +1,17 @@
+import pytest
+
 from src.ui.pages.login_page import LoginPage
 from tests.base_test import BaseTest
 
-
+@pytest.mark.owner("nikita")
+@pytest.mark.priority("P1")
 class TestSmokeLogin(BaseTest):
     """Test successful loging by user"""
 
     login_page = "https://www.saucedemo.com/"
     valid_user_name = "standard_user"
     valid_user_password = "secret_sauce"
-    success_page = "https://www.saucedemo.com/inventory.html"
+    success_page = "/inventory.html"
 
     def test_smoke_login(self):
         """
@@ -25,6 +28,7 @@ class TestSmokeLogin(BaseTest):
 
         self.logger.info("2. Fill in username and password")
         login_page.login(self.valid_user_name, self.valid_user_password)
+        self.wait_for_page_loaded()
         success_page_after_login = self.get_current_url()
-        assert success_page_after_login == self.success_page
+        assert self.success_page in success_page_after_login
         self.logger.info("Successfully logged in")

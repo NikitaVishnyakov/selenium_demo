@@ -1,4 +1,4 @@
-import logging
+from src.core.logger import setup_logger
 
 import pytest
 import requests
@@ -6,6 +6,18 @@ import requests
 from src.core.config import Config
 from src.core.driver_factory import create_driver
 from src.ui.pages.login_page import LoginPage
+
+REQUIRED = {"owner", "priority"}
+
+def pytest_collection_modifyitems(config, items):
+    missing = []
+    for item in items:
+        marks = {m.name for m in item.iter_markers()}
+        if not REQUIRED.issubset(marks):
+            missing.append((item.nodeid, REQUIRED - marks))
+    if missing:
+        lines = "\n".join(f"  {nid}  missing: {sorted(m)}" for nid, m in missing)
+        pytest.exit(f"Tests missing required markers:\n{lines}", returncode=5)
 
 
 def pytest_addoption(parser):
@@ -84,7 +96,6 @@ def login_page(driver):
     return page
 
 
-@pytest.fixture(autouse=True)
-def _logger(request):
-    if request.cls is not None:
-        request.cls.logger = logging.getLogger(request.cls.__name__)
+@pytest.fixture(scope="session", autouse=True)
+def _logging():
+    setup_logger()

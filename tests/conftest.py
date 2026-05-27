@@ -1,4 +1,5 @@
 import pytest
+import requests
 
 from src.core.config import Config
 from src.core.driver_factory import create_driver
@@ -46,3 +47,15 @@ def driver(config):
     driver = create_driver(browser=config.browser, headless=config.headless, remote_url=config.remote_url)
     yield driver
     driver.quit()
+
+@pytest.fixture(scope="session", autouse=True)
+def _health_check(config):
+    try:
+        response = requests.get(config.base_url, timeout=5)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        pytest.fail(
+            f"Site unreachable {config.base_url}. "
+            f"Reason: {e.__class__.__name__}\n"
+            f"Hint: Check --env and --locale values"
+        )

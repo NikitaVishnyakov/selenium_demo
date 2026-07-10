@@ -3,7 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class BrowserHelpers:
     """Хелперы уровня драйвера/браузера. Подходят и странице, и тесту."""
-    driver = None  # будет проставлен в наследнике
+    driver = None 
     DEFAULT_TIMEOUT = 10
 
     def get_current_url(self) -> str:

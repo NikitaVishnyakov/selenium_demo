@@ -1,11 +1,11 @@
 # selenium_demo
-QA automation framework demo: pytest + Selenium + API + Docker + CI.
+QA automation framework demo: pytest + Selenium + API + Docker[coming soon] + CI[coming soon].
 
 ## Run
-- `pytest` — все тесты
-- `pytest -m smoke` — только smoke
+- `pytest` — all tests
+- `pytest -m smoke` — only smokes
 - `pytest --headless` — UI в headless
-- `pytest -n auto` — параллельно
+- `pytest -n auto` — in parallel
 
-## Reports
+## Reports (not implemented yet)
 - `allure serve reports/allure-results`

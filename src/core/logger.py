@@ -1,5 +1,6 @@
 from datetime import datetime
 import logging
+import os
 from pathlib import Path
 
 LOG_DIR = Path("reports/logs")
@@ -18,8 +19,9 @@ def setup_logger(level=logging.INFO):
     root = logging.getLogger()
     root.setLevel(level)
 
+    worker = os.environ.get("PYTEST_XDIST_WORKER", "master")
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_file = LOG_DIR / f"pytest_log_{ts}.log"
+    log_file = LOG_DIR / f"pytest_log_{ts}_{worker}.log"
 
     formatter = logging.Formatter(LOG_FORMAT)
 

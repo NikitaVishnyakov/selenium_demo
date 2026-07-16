@@ -1,0 +1,8 @@
+services:
+  api:
+    # Pinned to the digest tested against in docs/phase1_research.md / BUG_REPORTS.md, so a
+    # future `:latest` update on Docker Hub can't silently change SUT behavior and desync the
+    # documented bugs from what actually reproduces.
+    image: infralightio/test-integration-api@sha256:c4766563ad1c47e242af1cef69644bf8dd6a22d34e6c27e96a15560368586705
+    ports:
+      - "8080:8080"

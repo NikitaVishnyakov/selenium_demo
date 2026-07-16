@@ -1,6 +1,6 @@
 # Test Strategy — QA Test API (Phase 2 deliverable)
 
-SUT: `infralightio/test-integration-api`. Source: `phase1_research.md` (bugs, endpoint inventory) + `phase2_instructions.md` (raw decisions). This is the finalized strategy that Phase 3 automation implements directly — every test case below maps to one pytest test (or a parametrized set).
+SUT: `infralightio/test-integration-api`. Built from manual SUT research (bugs, endpoint inventory) and raw design decisions. This is the finalized strategy that Phase 3 automation implements directly — every test case below maps to one pytest test (or a parametrized set).
 
 ---
 

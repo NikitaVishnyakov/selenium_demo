@@ -2,7 +2,7 @@
 
 Thirteen defects were found during manual exploration (Phase 1) and confirmed with automated
 regression tests (Phase 3). Format follows `test_strategy.md` §8. Severity is Critical / High /
-Medium / Low / Info. Raw research notes and curl transcripts: `docs/phase1_research.md`.
+Medium / Low / Info.
 
 Reproduction steps assume the service is reachable at `http://localhost:8080` with `test1`/`test123`
 (`test2`/`test456` used where a second tenant is needed). Restart the container between reproducing

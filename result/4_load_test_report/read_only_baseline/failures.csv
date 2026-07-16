@@ -1,0 +1,4 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+GET,/assets [GET],"ConnectionResetError(54, 'Connection reset by peer')",13,2026-07-16T11:15:39Z,2026-07-16T11:15:39Z
+GET,/assets [GET],RemoteDisconnected('Remote end closed connection without response'),1,2026-07-16T11:15:39Z,2026-07-16T11:15:39Z
+GET,/integrations [GET],"ConnectionResetError(54, 'Connection reset by peer')",16,2026-07-16T11:15:39Z,2026-07-16T11:15:39Z

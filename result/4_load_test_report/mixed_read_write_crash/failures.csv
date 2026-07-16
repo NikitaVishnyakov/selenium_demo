@@ -1,0 +1,14 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+POST,/integrations [POST],"ConnectionRefusedError(61, 'Connection refused')",560,2026-07-16T11:10:18Z,2026-07-16T11:11:43Z
+DELETE,/assets/[id] [DELETE],"ConnectionRefusedError(61, 'Connection refused')",11,2026-07-16T11:10:19Z,2026-07-16T11:10:36Z
+GET,/assets [GET],"ConnectionResetError(54, 'Connection reset by peer')",2,2026-07-16T11:10:18Z,2026-07-16T11:10:18Z
+GET,/integrations [GET],"ConnectionRefusedError(61, 'Connection refused')",1918,2026-07-16T11:10:19Z,2026-07-16T11:11:44Z
+POST,/integrations [POST],RemoteDisconnected('Remote end closed connection without response'),5,2026-07-16T11:10:18Z,2026-07-16T11:10:18Z
+PATCH,/assets [PATCH],"ConnectionRefusedError(61, 'Connection refused')",18,2026-07-16T11:10:19Z,2026-07-16T11:10:35Z
+POST,/integrations [POST],"ConnectionResetError(54, 'Connection reset by peer')",1,2026-07-16T11:10:18Z,2026-07-16T11:10:18Z
+POST,/assets [POST],"ConnectionRefusedError(61, 'Connection refused')",391,2026-07-16T11:10:19Z,2026-07-16T11:11:43Z
+GET,/integrations [GET],RemoteDisconnected('Remote end closed connection without response'),1,2026-07-16T11:10:18Z,2026-07-16T11:10:18Z
+DELETE,/assets/[id] [DELETE],"ConnectionResetError(54, 'Connection reset by peer')",1,2026-07-16T11:10:18Z,2026-07-16T11:10:18Z
+GET,/assets [GET],"ConnectionRefusedError(61, 'Connection refused')",1381,2026-07-16T11:10:18Z,2026-07-16T11:11:43Z
+PATCH,/assets [PATCH],"ConnectionResetError(54, 'Connection reset by peer')",1,2026-07-16T11:10:18Z,2026-07-16T11:10:18Z
+GET,/integrations [GET],"ConnectionResetError(54, 'Connection reset by peer')",6,2026-07-16T11:10:18Z,2026-07-16T11:10:18Z
